@@ -3,6 +3,16 @@
 // colors
 @primary: #30497b;
 
+// mixins
+.clearfix {
+
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -27,8 +37,16 @@ a, p, ul, li, div, span, h1, h2, h3, h4, h5, h6 {
     max-width: 1200px;
 }
 
-.main-header {
+.btn {
+    padding: 20px 55px;
+    display: inline-block;
+    background-color: @primary;
+    border-radius: 40px;
+    color: #ffffff;
+    font-size: 1.36rem;
+}
 
+.main-header {
     .flex-row {
         display: flex;
         align-items: center;
@@ -45,13 +63,179 @@ a, p, ul, li, div, span, h1, h2, h3, h4, h5, h6 {
 
             .brand-name {
                 padding-left: 12px;
+                font-size: 1.36rem;
             }
         }
         .navbar {
             width: 86%;
 
             .navbar-menu {
+                .navbar-menu-item {
+                    float: left;
+                    margin-right: 40px;
+
+                    &.right-item {
+                        float: right;
+                        margin-right: 0;
+                    }
+
+                    a {
+                        font-size: 1.36rem;
+                    }
+                }
+
+                .clearfix();
+            }
+        }
+    }
+}
+
+.jumbotron {
+    padding: 150px 0 250px;
+    background-image: url(../img/1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    .jumbotron-header {
+        color: @primary;
+        font-size: 36px;
+    }
+
+    .jumbotron-text {
+        width: 47%;
+        color: #8696b6;
+        padding: 40px 0 90px;
+        font-size: 24px;
+        line-height: 30px;
+    }
+}
+
+.advantages {
+    margin-bottom: 177px;
+
+    .advantages-title {
+        color: #6487c2;
+        text-align: center;
+        font-size: 1.7rem;
+    }
+
+    .advantages-cards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .advantages-card {
+            width: 30.3%;
+            min-width: 355px;
+
+            .card-image {
+                width: 80%;
+                min-height: 265px;
+                margin: 0 auto;
                 
+                &.first-image {
+                    background-position: -120px -30px;
+                    background-image: url('../img/icon.png');
+                }
+
+                &.second-image {
+                    background-position: -400px -30px;
+                    background-image: url('../img/icon.png');
+                }
+
+                &.third-image {
+                    background-position: -410px -270px;
+                    background-image: url('../img/icon.png');
+                }
+            }
+
+            .card-title {
+                text-align: center;
+                font-size: 1.36rem;
+                color: #6487c2;
+                text-transform: uppercase;
+                padding-bottom: 30px;
+            }
+
+            .card-text {
+                text-align: center;
+                font-size: 1.36rem;
+                color: #b2c3df;
+                line-height: 30px;
+            }
+        }
+    }
+}
+
+.about {
+
+    .structure {
+        
+        .structure-title {
+            margin-bottom: 125px;
+            font-size: 1.7rem;
+            color: #314978;
+            text-align: center;
+        }
+
+        .structure-left {
+            background-image: url('../img/3.png');
+            background-position: right top;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .structure-right {
+            background-image: url('../img/2.png');
+            background-position: left top;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+
+        .structure-block {
+            margin-bottom: 130px;
+
+            .title {
+                font-size: 1.7rem;
+                color: @primary;
+                padding-left: 130px;
+
+                &.border {
+                    vertical-align: middle;
+                    padding-left: 60px;
+
+                    &::before {
+                        content: '';
+                        display: inline-block;
+                        width: 50px;
+                        min-height: 10px;
+                        background-color: #7ddfdd;
+                        vertical-align: middle;
+                        margin-right: 15px;
+                    }
+                }
+            }
+
+            .text {
+                width: 50%;
+                padding: 20px 0;
+                font-size: 1.35rem;
+                color: #88ace5;
+            }
+
+            &.right {
+
+                .title {
+                    text-align: right;
+                }
+
+                .text {
+                    text-align: right;
+                    float: right;       
+                }
+
+                .clearfix();
             }
         }
     }
