@@ -169,7 +169,6 @@ a, p, ul, li, div, span, h1, h2, h3, h4, h5, h6 {
 }
 
 .about {
-
     .structure {
         
         .structure-title {
@@ -239,4 +238,60 @@ a, p, ul, li, div, span, h1, h2, h3, h4, h5, h6 {
             }
         }
     }
+    .ads-board {
+
+        .ads-board-title {
+            font-size: 1.7rem;
+            text-align: center;
+            color: @primary;
+            margin-bottom: 70px;
+        }
+
+        .ads-cards {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .ads-card {
+                width: 31%;
+                min-width: 300px;
+                border: 1px solid #000000;
+
+                .card-title-block {
+                    padding: 80px 40px;
+                    position: relative;
+                    border: 1px solid #000000;
+                    
+                    .card-title {
+                        text-align: center;
+                        font-size: 1.35rem;
+
+                        .quotes {
+                            display: inline-block;
+                            font-size: 3rem;
+                            position: absolute;
+                            color: #88ace5;
+                        }
+
+                        .quotes.left {
+                            top: 30px;
+                            left: 30px;
+                        }
+
+                        .quotes.right {
+                            bottom: 0px;
+                            right: 30px;
+                        }
+
+                    }
+                }
+                .card-author {
+                    padding: 30px 45px;
+                }
+            }
+        }
+
+        
+    }
 }
+

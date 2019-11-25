@@ -201,3 +201,45 @@ h6 {
   display: block;
   clear: both;
 }
+.about .ads-board .ads-board-title {
+  font-size: 1.7rem;
+  text-align: center;
+  color: #30497b;
+  margin-bottom: 70px;
+}
+.about .ads-board .ads-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.about .ads-board .ads-cards .ads-card {
+  width: 31%;
+  min-width: 300px;
+  border: 1px solid #000000;
+}
+.about .ads-board .ads-cards .ads-card .card-title-block {
+  padding: 80px 40px;
+  position: relative;
+  border: 1px solid #000000;
+}
+.about .ads-board .ads-cards .ads-card .card-title-block .card-title {
+  text-align: center;
+  font-size: 1.35rem;
+}
+.about .ads-board .ads-cards .ads-card .card-title-block .card-title .quotes {
+  display: inline-block;
+  font-size: 3rem;
+  position: absolute;
+  color: #88ace5;
+}
+.about .ads-board .ads-cards .ads-card .card-title-block .card-title .quotes.left {
+  top: 30px;
+  left: 30px;
+}
+.about .ads-board .ads-cards .ads-card .card-title-block .card-title .quotes.right {
+  bottom: 0px;
+  right: 30px;
+}
+.about .ads-board .ads-cards .ads-card .card-author {
+  padding: 30px 45px;
+}
